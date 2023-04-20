@@ -13,6 +13,7 @@
 		76229ABD29F10D2F00755B80 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76229ABC29F10D2F00755B80 /* Preview Assets.xcassets */; };
 		76229AC429F10DBD00755B80 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76229AC329F10DBD00755B80 /* CircleView.swift */; };
 		76229AC629F10EE700755B80 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76229AC529F10EE700755B80 /* ButtonView.swift */; };
+		76229AC829F11D7400755B80 /* PersonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76229AC729F11D7400755B80 /* PersonView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		76229ABC29F10D2F00755B80 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		76229AC329F10DBD00755B80 /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		76229AC529F10EE700755B80 /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
+		76229AC729F11D7400755B80 /* PersonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 				76229AB529F10D2E00755B80 /* TrafficlightUIApp.swift */,
 				76229AB729F10D2E00755B80 /* ContentView.swift */,
 				76229AC329F10DBD00755B80 /* CircleView.swift */,
+				76229AC729F11D7400755B80 /* PersonView.swift */,
 				76229AC529F10EE700755B80 /* ButtonView.swift */,
 				76229AB929F10D2F00755B80 /* Assets.xcassets */,
 				76229ABB29F10D2F00755B80 /* Preview Content */,
@@ -143,6 +146,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76229AC829F11D7400755B80 /* PersonView.swift in Sources */,
 				76229AC429F10DBD00755B80 /* CircleView.swift in Sources */,
 				76229AB829F10D2E00755B80 /* ContentView.swift in Sources */,
 				76229AC629F10EE700755B80 /* ButtonView.swift in Sources */,

@@ -12,10 +12,15 @@ enum ColorView {
 }
 
 struct ContentView: View {
+    
+    //MARK: - Private properties
     @State private var buttonTitle = "Start"
+    
     @State private var redAlfa = 0.3
     @State private var yellowAlfa = 0.3
     @State private var greenAlfa = 0.3
+    
+    @State private var redStopAlfa = 0.3
     
     @State private var colors = ColorView.red
     
@@ -26,6 +31,8 @@ struct ContentView: View {
             CircleView(color: .yellow, alfa: yellowAlfa, shadowColor: .yellow)
                 .padding(.bottom)
             CircleView(color: .green, alfa: greenAlfa, shadowColor: .green)
+                .padding(.bottom, 30)
+            PersonView(stopAlfa: redStopAlfa, goAlfa: greenAlfa)
             Spacer()
             ButtonView(title: buttonTitle) {
                 buttonTitle = "Next"
@@ -36,8 +43,9 @@ struct ContentView: View {
     }
 }
 
-extension ContentView {
-    private func actionNextColor() {
+//MARK: - Extension private fuctions
+private extension ContentView {
+    func actionNextColor() {
         let lightOne = 1.0
         let lightOf = 0.3
         
@@ -46,14 +54,17 @@ extension ContentView {
             colors = .yellow
             redAlfa = lightOne
             greenAlfa = lightOf
+            redStopAlfa = lightOne
         case .yellow:
             colors = .green
             redAlfa = lightOf
             yellowAlfa = lightOne
+            redStopAlfa = lightOne
         case .green:
             colors = .red
             yellowAlfa = lightOf
             greenAlfa = lightOne
+            redStopAlfa = lightOf
         }
     }
 }
