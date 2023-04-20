@@ -32,7 +32,7 @@ struct ContentView: View {
                 .padding(.bottom)
             CircleView(color: .green, alfa: greenAlfa, shadowColor: .green)
                 .padding(.bottom, 30)
-            PersonView(stopAlfa: redStopAlfa, goAlfa: greenAlfa)
+            PersonView(stopAlfa: greenAlfa, goAlfa: redStopAlfa)
             Spacer()
             ButtonView(title: buttonTitle) {
                 buttonTitle = "Next"
