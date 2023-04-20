@@ -7,15 +7,54 @@
 
 import SwiftUI
 
+enum ColorView {
+    case red, yellow, green
+}
+
 struct ContentView: View {
+    @State private var buttonTitle = "Start"
+    @State private var redAlfa = 0.3
+    @State private var yellowAlfa = 0.3
+    @State private var greenAlfa = 0.3
+    
+    @State private var colors = ColorView.red
+    
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            CircleView(color: .red, alfa: redAlfa, shadowColor: .red)
+                .padding(.bottom)
+            CircleView(color: .yellow, alfa: yellowAlfa, shadowColor: .yellow)
+                .padding(.bottom)
+            CircleView(color: .green, alfa: greenAlfa, shadowColor: .green)
+            Spacer()
+            ButtonView(title: buttonTitle) {
+                buttonTitle = "Next"
+                actionNextColor()
+            }
         }
-        .padding()
+        .padding(.top)
+    }
+}
+
+extension ContentView {
+    private func actionNextColor() {
+        let lightOne = 1.0
+        let lightOf = 0.3
+        
+        switch colors {
+        case .red:
+            colors = .yellow
+            redAlfa = lightOne
+            greenAlfa = lightOf
+        case .yellow:
+            colors = .green
+            redAlfa = lightOf
+            yellowAlfa = lightOne
+        case .green:
+            colors = .red
+            yellowAlfa = lightOf
+            greenAlfa = lightOne
+        }
     }
 }
 
